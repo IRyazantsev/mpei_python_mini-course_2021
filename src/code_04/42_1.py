@@ -1,0 +1,6 @@
+...
+ax.set_xlabel('x label')
+ax.set_ylabel('y label')
+ax.set_title("Simple Plot")
+ax.legend()
+...
