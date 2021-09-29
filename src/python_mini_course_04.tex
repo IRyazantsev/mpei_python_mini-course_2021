@@ -12,6 +12,8 @@
 \usepackage{graphicx}
 \usepackage{listings}
 
+\usepackage{amsmath}
+
 \author{Игорь Рязанцев}
 \title{Построение графиков в Python}
 \institute{Лекция 04}
@@ -100,6 +102,148 @@ pip install scipy
 \begin{frame}{График функции y = sin(x)}
 \lstinputlisting[language=Python]{code_04/45.py}
 \end{frame}
+
+
+\begin{frame}{Матрицы}
+\textbf{Матрицей} в математике называют объект, записываемый в виде прямоугольной таблицы, элементами которой являются числа (могут быть как действительные, так и комплексные). \\
+\vspace{0.5cm}
+\[
+  A_{3\times 3} = 
+  \begin{pmatrix}
+    a_{11} & a_{12} & a_{13}\\
+    a_{21} & a_{22} & a_{23}\\
+    a_{31} & a_{32} & a_{33}
+  \end{pmatrix}
+\]
+
+\begin{itemize}
+\item Матрица состоит из i-строк и j-столбцов;
+\item Каждый ее элемент имеет соответствующее позиционное обозначение: $a_{ij}$ находится на \emph{i}-ой строке и \emph{j}-м столбце;
+\item Главная диагональ -- элементы, у которых совпадают номера строк и столбцов.
+\end{itemize}
+\end{frame}
+
+\subsection{Вектор}
+\begin{frame}{Вектор}
+\textbf{Вектором} называется матрица, у которой есть только один столбец или одна строка. \\
+\vspace{0.5cm}
+Вектор-строка имеет следующую математическую запись
+\vspace{0.2cm}
+\[
+  v = 
+  \begin{pmatrix}
+    a_{11} & a_{12} \\
+  \end{pmatrix}
+\]
+\\
+\vspace{0.2cm}
+в Python можно задать следующим образом
+\vspace{0.2cm}
+\lstinputlisting[language=Python]{code_04/47.py}
+\vspace{0.2cm}
+Результат: \\
+\lstinputlisting[language=Python]{code_04/47_1.txt}
+\end{frame}
+
+
+\begin{frame}{Вектор}
+Вектор-столбец имеет следующую математическую запись
+\vspace{0.2cm}
+\[
+  v = 
+  \begin{pmatrix}
+    a_{11}\\
+    a_{21}\\
+  \end{pmatrix}
+\]
+\\
+\vspace{0.2cm}
+в Python можно задать следующим образом
+\vspace{0.2cm}
+\lstinputlisting[language=Python]{code_04/48.py}
+\vspace{0.2cm}
+Результат: \\
+\lstinputlisting[language=Python]{code_04/48_1.txt}
+\end{frame}
+
+
+\subsection{Квадратная матрица}
+\begin{frame}{Квадратная матрица}
+Матрица называется \textbf{квадратной}, если количество строк и столбцов совпадают.
+\vspace{0.2cm}
+\[
+  v = 
+  \begin{pmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9 \\
+  \end{pmatrix}
+\]
+\\
+%\vspace{0.2cm}
+\lstinputlisting[language=Python]{code_04/49.py}
+%\vspace{0.2cm}
+Результат: \\
+\lstinputlisting[language=Python]{code_04/49_1.txt}
+\end{frame}
+
+
+\subsection{Диагональная матрица}
+\begin{frame}{Диагональная матрица}
+\textbf{Диагональная матрица} – матрица, у которой все элементы, кроме тех, что расположены на главной диагонали, равны нулю.
+\vspace{0.2cm}
+\[
+  v = 
+  \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 5 & 0 \\
+    0 & 0 & 9 \\
+  \end{pmatrix}
+\]
+\\
+%\vspace{0.2cm}
+\lstinputlisting[language=Python]{code_04/50.py}
+%\vspace{0.2cm}
+Результат: \\
+\lstinputlisting[language=Python]{code_04/50_1.txt}
+\end{frame}
+
+\subsection{Единичная матрица}
+\begin{frame}{Единичная матрица}
+\textbf{Единичной матрицей} называют такую квадратную матрицу, у которой элементы главной диагонали равны единицы, а все остальные нулю.
+\vspace{0.2cm}
+\[
+  v = 
+  \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1 \\
+  \end{pmatrix}
+\]
+\\
+\vspace{-0.6cm}
+\lstinputlisting[language=Python]{code_04/51.py}
+%\vspace{0.2cm}
+Результат: \\
+\lstinputlisting[language=Python]{code_04/51_1.txt}
+\end{frame}
+
+
+\subsection{Произведение матриц}
+\begin{frame}{Произведение матриц}
+Каждый элемент результирующей матрицы — сумма произведений каждого элемента соответствующей строки в первой матрице с соответствующим элементом из колонки второй. 
+\vspace{0.2cm}
+\center{\includegraphics[scale=0.4]{image/matrix_dot.png}} \\
+\end{frame}
+
+
+\begin{frame}{Произведение матриц \textbf{numpy.dot(A, B)}}
+\lstinputlisting[language=Python]{code_04/52.py}
+%\vspace{0.2cm}
+Результат: \\
+\lstinputlisting[language=Python]{code_04/52_1.txt}
+\end{frame}
+
 
 
 \part{2}
