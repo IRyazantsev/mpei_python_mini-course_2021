@@ -249,7 +249,8 @@ pip install scipy
   \end{pmatrix}
 \]
 \\
-Сложение матриц
+\vspace{0.5cm}
+Сложение матриц A + B
 \\
 \[
   A + B = 
@@ -290,7 +291,8 @@ pip install scipy
   \end{pmatrix}
 \]
 \\
-Вычитание матриц
+\vspace{0.5cm}
+Вычитание матриц A - B
 \\
 \[
   A - B = 
@@ -312,7 +314,7 @@ pip install scipy
 
 
 \subsection{Скалярное произведение}
-\begin{frame}{Скалярное произведение A $*$ n}
+\begin{frame}{Скалярное произведение A $\times$ n}
 В скалярном произведении постоянное значение умножается на каждый элемент матрицы.\\
 \[
   A = 
@@ -323,6 +325,7 @@ pip install scipy
   \end{pmatrix}
 \]
 \\
+\vspace{0.5cm}
 Умножения матрицы А на число \emph{n}
 \\
 \[
@@ -336,7 +339,7 @@ pip install scipy
 \end{frame}
 
 
-\begin{frame}{Скалярное произведение  A $*$ n}
+\begin{frame}{Скалярное произведение  A $\times$ n}
 Оператор $*$ используется для умножения скалярного значения на элементы входной матрицы.
 \vspace{0.2cm}
 \lstinputlisting[language=Python]{code_04/55.py}
@@ -346,17 +349,39 @@ pip install scipy
 \end{frame}
 
 
-
-
 \subsection{Произведение матриц}
-\begin{frame}{Произведение матриц}
-Каждый элемент результирующей матрицы — сумма произведений каждого элемента соответствующей строки в первой матрице с соответствующим элементом из колонки второй. 
-\vspace{0.2cm}
-\center{\includegraphics[scale=0.4]{image/matrix_dot.png}} \\
+\begin{frame}{Произведение матриц A $\times$ B}
+\[
+  A = 
+  \begin{pmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22} 
+  \end{pmatrix} 
+\]
+\\
+\[
+  B = 
+  \begin{pmatrix}
+    b_{11} & b_{12} \\
+    b_{21} & b_{22} 
+  \end{pmatrix}
+\]
+\\
+\vspace{0.5cm}
+Произведение матриц A $\times$ B
+\\
+\[
+  A \times B = 
+  \begin{pmatrix}
+    a_{11} \times b_{11} + a_{12} \times b_{21} & a_{11} \times b_{12} + a_{12} \times b_{22} \\
+    a_{21} \times b_{11} + a_{22} \times b_{21} & a_{21} \times b_{12} + a_{22} \times b_{22} 
+  \end{pmatrix}
+\]
 \end{frame}
 
 
-\begin{frame}{Произведение матриц numpy.dot(A, B)}
+
+\begin{frame}{Произведение матриц A $\times$ B}
 \lstinputlisting[language=Python]{code_04/52.py}
 %\vspace{0.2cm}
 Результат: \\
