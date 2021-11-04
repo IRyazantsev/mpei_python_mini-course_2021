@@ -1,3 +1,3 @@
-import math, numpy
-vec_vert = numpy.array([[1], [2]])
-print(vec_vert)
+import numpy
+Vv = numpy.matrix([[1], [2]])
+print(Vv)

@@ -1,3 +1,3 @@
-import math, numpy
-vec_hor = numpy.array([1, 2])
-print(vec_hor)
+import numpy
+Vh = numpy.matrix([1, 2])
+print(Vh)

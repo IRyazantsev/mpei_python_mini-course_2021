@@ -1,4 +1,4 @@
-import math, numpy
-sqr_array = numpy.array([[1, 2, 3], [4, 5, 6],
-                         [7, 8, 9]])
-print(sqr_array)
+import numpy
+A = numpy.matrix([[1, 2, 3], [4, 5, 6],
+                  [7, 8, 9]])
+print(A)

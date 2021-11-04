@@ -1,9 +1,9 @@
 import numpy
 A = numpy.matrix([[1, 2, 3],
                   [4, 5, 6],
-                       [7, 8, 9]])
+                  [7, 8, 9]])
 B = numpy.matrix([[1, 2, 3],
                   [4, 5, 6],
                   [7, 8, 9]])
-C = numpy.dot(A, B)
+C = A - B
 print(C)
