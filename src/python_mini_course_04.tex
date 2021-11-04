@@ -57,6 +57,28 @@
 pip install matplotlib
 \end{frame}
 
+\begin{frame}{Основные компоненты matplotlib}
+
+\begin{minipage}{0.35\textwidth}
+  \begin{flushleft}
+	\includegraphics[scale=0.2]{image/mpl_anatomy.jpg}
+	\vspace{2.2cm}
+  \end{flushleft}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+  \begin{flushright}
+	\begin{enumerate}
+		\item \textbf{Figure} -- контейнер самого верхнего уровня, которых может содержать несколько контейнеров \textit{Axes}. 
+		\item \textbf{Axes} -- область на которой отражаются графики, а так же все вспомогательные атрибуты (линии сетки, метки, указатели и т.д.).
+		\item Каждая область Axes содержит XAxis и YAxis. Они содержат, деления, метки и прочие вспомогательные атрибуты. 
+\end{enumerate}
+  \end{flushright}
+\end{minipage}
+
+\end{frame}
+
+
+
 \subsection{Вывод графика}
 \begin{frame}{Вывод графика}
 \lstinputlisting[language=Python]{code_04/41.py}
@@ -91,11 +113,18 @@ pip install matplotlib
 
 \subsection{Установка библиотеки}
 \begin{frame}{Библиотека numpy}
-\textbf{\# Установка библиотеки numpy} \\
+\textbf{\# Установка библиотек} \\
 \vspace{0.5cm}
 pip install numpy \\
 \vspace{0.2cm}
-pip install scipy
+pip install scipy \\
+\vspace{0.5cm}
+
+\textbf{NumPy} -- библиотека поддержки многомерных массивов (включая матрицы) и высокоуровневых математических функций, предназначенных для работы с многомерными массивами. NumPy можно рассматривать как свободную альтернативу MATLAB.
+
+\vspace{0.5cm}
+\textbf{SciPy} -- библиотека для выполнения научных и инженерных расчётов. 
+
 \end{frame}
 
 
@@ -103,6 +132,10 @@ pip install scipy
 \lstinputlisting[language=Python]{code_04/45.py}
 \end{frame}
 
+
+\begin{frame}{График функции y = sin(x)}
+\lstinputlisting[language=Python]{code_04/56.py}
+\end{frame}
 
 \begin{frame}{Матрицы}
 \textbf{Матрицей} в математике называют объект, записываемый в виде прямоугольной таблицы, элементами которой являются числа (могут быть как действительные, так и комплексные). \\
