@@ -32,6 +32,197 @@
 \titlepage
 \end{frame}
 
+\begin{frame}{Что мы изучили}
+\begin{itemize}
+\item Переменные 
+\item Кортежи
+\item Списки (вставка, удаление, сортировка)
+\item Циклы \textbf{for}
+\item Оператор \textbf{if}
+\item Функции
+\item Классы (наследование)
+\item Импорт модулей
+\item Файлы
+\item Ввод-вывод 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Переменные}
+\textbf{\# Объявление переменной} \\
+\vspace{0.5cm}
+\lstinputlisting[language=Python]{code/03_1.py}
+\end{frame}
+
+\begin{frame}{Переменные}
+\textbf{\# Приведение к другому типу переменной} \\
+\textbf{\# (int), (float), (str) } \\
+\vspace{0.0cm}
+\lstinputlisting[language=Python]{code/03_2.py}
+\end{frame}
+
+\begin{frame}{Переменные}
+\textbf{\# Область действия переменной} \\
+\vspace{0.4cm}
+\textbf{\# Верно} \\
+\lstinputlisting[language=Python]{code/03_3.py}
+\vspace{0.4cm}
+\textbf{\# Неверно} \\
+\lstinputlisting[language=Python]{code/03_4.py}
+\end{frame}
+
+
+\begin{frame}{Кортежи tuple()}
+\lstinputlisting[language=Python]{code/05.py}
+\end{frame}
+
+
+\begin{frame}{Списки list()}
+\lstinputlisting[language=Python]{code/06.py}
+\end{frame}
+
+
+\begin{frame}{Списки list()}
+\textbf{\# append() -- добавить элемент в конец} 
+\lstinputlisting[language=Python]{code/08.py}
+\vspace{0.5cm}
+\textbf{\# insert(позиция, элемент) -- добавить элемент в указанную позицию} \\
+\textbf{\# remove(элемент) -- удаление элемента по значению} \\
+\textbf{\# pop(позиция) -- удаление элемента по индексу\footnote{Значение индекса в списке начинается с 0}} \\
+\textbf{\# sort() -- сортировка элементов списка} \\
+\textbf{\# sort(reverse=True) -- сортировка в обратном порядке} 
+\end{frame}
+
+
+
+\begin{frame}{Цикл for}
+\lstinputlisting[language=Python]{code/06_1.py}
+\vspace{0.3cm}
+\textbf{\# Функция \textbf{range()} упрощает построение числовых последовательностей.}
+\lstinputlisting[language=Python]{code/07.py}
+\end{frame}
+
+\begin{frame}{Оператор if}
+В \textbf{if} центральное место занимает выражение, результатом которого является логическая истина \textbf{(True)} или логическая ложь \textbf{(False)}; это выражение называется \textit{условием}.\\
+\vspace{0.5cm}
+\textbf{\# Общая форма записи:}
+\vspace{0.5cm}
+\lstinputlisting[language=Python]{code/16.py}
+\vspace{0.5cm}
+\end{frame}
+
+
+\begin{frame}{Оператор if}
+\begin{tabular}{|c|c|}
+\hline 
+== или \textbf{is} & равно \\ 
+\hline 
+> & больше \\ 
+\hline 
+>= & больше или равно \\ 
+\hline 
+<= & меньше или равно \\ 
+\hline 
+< & меньше \\ 
+\hline 
+\end{tabular} 
+\par
+\vspace{0.5cm}
+\lstinputlisting[language=Python]{code/16_1.py}
+\end{frame}
+
+
+\begin{frame}{Функции}
+\textbf{Функция -- именованный блок кода, предназначенный для решения одной конкретной задачи.} \\
+\vspace{0.5cm}
+\lstinputlisting[language=Python]{code/24.py}
+\vspace{0.5cm}
+Результат: \\
+Helen is 21! \\
+\end{frame}
+
+
+\begin{frame}{Классы}
+\vspace{0.2cm}
+Класс определяет общее поведение для целой категории объектов. \textbf{Класс -- это спецификация}.
+\vspace{0.5cm}
+\lstinputlisting[language=Python]{code/31_1.py}
+\vspace{0.5cm}
+Результат: \\
+LED is switch on!\\
+\end{frame}
+
+
+\begin{frame}{Наследование класса}
+\lstinputlisting[language=Python]{code/32.py}
+\end{frame}
+
+
+\begin{frame}{Импорт модулей}
+\textbf{Вариант 1}
+\vspace{0.5cm}
+\lstinputlisting[language=Python]{code/28.py}
+\vspace{0.5cm}
+Результат: \\
+120 \\
+\end{frame}
+
+
+\begin{frame}{Импорт модулей}
+\textbf{Вариант 2}
+\vspace{0.5cm}
+\lstinputlisting[language=Python]{code/29.py}
+\vspace{0.5cm}
+Результат: \\
+120 \\
+\end{frame}
+
+
+\begin{frame}{Импорт модулей}
+\textbf{Вариант 3}
+\vspace{0.5cm}
+\lstinputlisting[language=Python]{code/30.py}
+\vspace{0.5cm}
+Результат: \\
+120 \\
+\end{frame}
+
+\begin{frame}{Файлы (чтение)}
+\textbf{\# Чтение файла} \\
+\vspace{0.5cm}
+\lstinputlisting[language=Python]{code/34.py}
+\vspace{0.5cm}
+Результат: \\
+line 1 \\
+line 2 \\
+line 3 \\
+\end{frame}
+
+
+\begin{frame}{Файлы (запись)}
+\textbf{\# Запись в новый файл} \\
+\textbf{\# Присоединение данных к файлу (режим <<a>>)} \\
+\vspace{0.5cm}
+\lstinputlisting[language=Python]{code/35.py}
+\vspace{0.5cm}
+Результат (в файле): \\
+\lstinputlisting[language=Python]{code/new_file.txt}
+\end{frame}
+
+
+\begin{frame}{Ввод данных с клавиатуры}
+\vspace{0.3cm}
+\textbf{\# Ожидает ввод целого числа} 
+\lstinputlisting[language=Python]{code/39_1.py}
+\vspace{0.3cm}
+\textbf{\# Ожидает ввод вещественного числа} 
+\lstinputlisting[language=Python]{code/39_2.py}
+\vspace{0.3cm}
+\textbf{\# Ожидает ввод сроки} 
+\lstinputlisting[language=Python]{code/39_3.py}
+\end{frame}
+
+
 \begin{frame}[t]{Оглавление}
 \tableofcontents[part=1]
 \end{frame}
@@ -39,6 +230,14 @@
 %\begin{frame}[t]{Оглавление}
 %\tableofcontents
 %\end{frame}
+
+
+
+
+
+
+
+
 
 
 \part{1}
@@ -66,12 +265,12 @@ pip install matplotlib
   \end{flushleft}
 \end{minipage}
 \begin{minipage}{0.6\textwidth}
-  \begin{flushright}
-	\begin{enumerate}
+  \begin{flushright}  
+	\begin{itemize}
 		\item \textbf{Figure} -- контейнер самого верхнего уровня, которых может содержать несколько контейнеров \textit{Axes}. 
 		\item \textbf{Axes} -- область на которой отражаются графики, а так же все вспомогательные атрибуты (линии сетки, метки, указатели и т.д.).
-		\item Каждая область Axes содержит XAxis и YAxis. Они содержат, деления, метки и прочие вспомогательные атрибуты. 
-\end{enumerate}
+		\item Каждая область \textbf{Axes} содержит \textbf{XAxis} и \textbf{YAxis}, которые в свою очередь содержат: деления, метки и прочие вспомогательные атрибуты. 
+\end{itemize}
   \end{flushright}
 \end{minipage}
 
