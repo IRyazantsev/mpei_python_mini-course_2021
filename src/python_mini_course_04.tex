@@ -15,7 +15,7 @@
 \usepackage{amsmath}
 
 \author{Игорь Рязанцев}
-\title{Построение графиков в Python}
+\title{Линейная алгебра на Python}
 \institute{Лекция 04}
 \date{2021г.}
 
@@ -264,17 +264,13 @@ line 3 \\
 \tableofcontents[part=1]
 \end{frame}
 
+\begin{frame}{Оглавление}
+\tableofcontents[part=2]
+\end{frame}
+
 %\begin{frame}[t]{Оглавление}
 %\tableofcontents
 %\end{frame}
-
-
-
-
-
-
-
-
 
 
 \part{1}
@@ -582,6 +578,7 @@ pip install scipy \\
 \end{frame}
 
 
+\part{2}
 \subsection{Скалярное произведение}
 \begin{frame}{Скалярное произведение A $\times$ n}
 В скалярном произведении постоянное значение умножается на каждый элемент матрицы.\\
@@ -618,6 +615,42 @@ pip install scipy \\
 \end{frame}
 
 
+\subsection{Скалярное деление}
+\begin{frame}{Скалярное деление A / n}
+В скалярном деление каждый элемент матрицы делиться на постоянное значение.\\
+\[
+  A = 
+  \begin{pmatrix}
+    a_{11} & a_{12} & a_{13}\\
+    a_{21} & a_{22} & a_{23}\\
+    a_{31} & a_{32} & a_{33}
+  \end{pmatrix}
+\]
+\\
+\vspace{0.5cm}
+Деление матрицы А на число \emph{n}
+\\
+\[
+  A / n = 
+  \begin{pmatrix}
+    a_{11} / n & a_{12} / n & a_{11} / n \\
+    a_{21} / n & a_{22} / n & a_{23} / n \\
+    a_{31} / n & a_{32} / n & a_{33} / n
+  \end{pmatrix}
+\]
+\end{frame}
+
+
+\begin{frame}{Скалярное деление A / n}
+Оператор ‘/’ делит каждый элемент матрицы на скалярное / постоянное значение.
+\vspace{0.2cm}
+\lstinputlisting[language=Python]{code_04/57.py}
+%\vspace{0.2cm}
+Результат: \\
+\lstinputlisting[language=Python]{code_04/57_1.txt}
+\end{frame}
+
+
 \subsection{Произведение матриц}
 \begin{frame}{Произведение матриц A $\times$ B}
 \[
@@ -649,7 +682,6 @@ pip install scipy \\
 \end{frame}
 
 
-
 \begin{frame}{Произведение матриц A $\times$ B}
 \lstinputlisting[language=Python]{code_04/52.py}
 %\vspace{0.2cm}
@@ -658,8 +690,50 @@ pip install scipy \\
 \end{frame}
 
 
+\subsection{Транспонирование матрицы}
+\begin{frame}{Транспонирование матрицы}
+Транспонирование матрицы включает в себя переворачивание матрицы по соответствующим диагоналям, т. е. меняются местами строки и столбцы входной матрицы.
+\vspace{0.5cm}
+\[
+  A = 
+  \begin{pmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23}
+  \end{pmatrix} 
+\]
+\\
+После выполнения операции транспонирования Matrix.T
+\\
+\[
+  A = A.T = 
+  \begin{pmatrix}
+    a_{11} & a_{21} \\
+    a_{12} & a_{22} \\
+    a_{13} & a_{23} 
+  \end{pmatrix}
+\]
+\end{frame}
 
-\part{2}
+
+\begin{frame}{Транспонирование матрицы}
+\lstinputlisting[language=Python]{code_04/58.py}
+%\vspace{0.2cm}
+Результат: \\
+\lstinputlisting[language=Python]{code_04/58_1.txt}
+\end{frame}
+
+
+\begin{frame}{Литература}
+\begin{columns}[onlytextwidth,T]
+    \column{30mm}
+	\includegraphics[scale=0.4]{image/math_pybook.png}
+    \column{\dimexpr\linewidth-30mm-20mm}
+	Devpractice Team. \\Линейная алгебра на Python [2019]         
+    \end{columns}  
+\end{frame}
+
+
+\part{3}
 
 \begin{frame}[t]{Литература}
 \input{bibliography.tex}
